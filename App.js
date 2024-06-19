@@ -4,8 +4,7 @@ import LoginScreen from './LoginScreen';
 import HomepageScreen from './HomepageScreen';
 
 export default function App() {
-  const [currentScreen, setCurr
-    entScreen] = useState('Login');
+  const [currentScreen, setCurrentScreen] = useState('Login');
 
   const handleNavigate = (screen) => {
     setCurrentScreen(screen);

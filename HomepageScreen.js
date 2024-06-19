@@ -2,13 +2,23 @@ import React from 'react';
 import { View, Text, Image, TextInput, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 
 const featuredJobs = [
-  { id: '1', title: 'Software Engineer', company: 'Facebook', salary: '$180,000', location: 'Accra, Ghana', icon: 'https://cdn-icons-png.flaticon.com/512/733/733547.png' },
+  { id: '1', title: 'Software Engineer', company: 'Facebook', salary: '$180,000', location: 'Accra, Ghana', icon: 'https://cdn-icons-png.flaticon.com/512/733/73g3547.pn' },
   { id: '2', title: 'Data Scientist', company: 'Google', salary: '$160,000', location: 'California, US', icon: 'https://cdn-icons-png.flaticon.com/512/2965/2965309.png' },
+  {
+    id: '3', title: 'Product Manager', company: 'Facebook', salary: '$160,000', location: 'California, US', icon: 'https://cdn-icons-png.flaticon.com/512/733/733547.png',},
+    {
+    id: '4', title: 'Product Manager', company: 'Facebook', salary: '$160,000', location: 'California, US', icon: 'https://cdn-icons-png.flaticon.com/512/733/733547.png',
+    }
+  
 ];
 const popularJobs = [
-  { id: '1', title: 'Jr Executive', company: 'Burger King', salary: '$96,000/y', location: 'Los Angeles, US', icon: 'https://upload.wikimedia.org/wikipedia/commons/8/85/Burger_King_logo_%281999%29.svg' },
-  { id: '2', title: 'Product Manager', company: 'Beats', salary: '$84,000/y', location: 'Florida, US', image: require('./assets/beat.png') },
+  { id: '1', title: 'Jr Executive', company: 'Burger King', salary: '$96,000/y', location: 'Los Angeles, US', icon: 'https://cdn-icons-png.flaticon.com/512/733/733547.png',
+  },
+  { id: '2', title: 'Product Manager', company: 'Beats', salary: '$84,000/y', location: 'Florida, US', icon: 'https://cdn-icons-png.flaticon.com/512/733/733547.png'},
   { id: '3', title: 'Product Manager', company: 'Facebook', salary: '$86,000/y', location: 'Florida, US', icon: 'https://cdn-icons-png.flaticon.com/512/733/733547.png' },
+  {
+    id: '4', title: 'Product Manager', company: 'Facebook', salary: '$86,000/y', location: 'Florida, US', icon: 'https://cdn-icons-png.flaticon.com/512/733/733547.png',
+  }
 ];
 
 
@@ -17,8 +27,8 @@ const HomepageScreen = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.profileSection}>
-          <Text style={styles.name}>Eric Atsu</Text>
-          <Text style={styles.email}>eric@gmail.com</Text>
+          <Text style={styles.name}>Kobby</Text>
+          <Text style={styles.email}>Kobby90@gmail.com</Text>
         </View>
         <Image
           source={{ uri: 'https://randomuser.me/api/portraits/men/41.jpg' }}
@@ -63,23 +73,26 @@ const HomepageScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: 'white',
+   color: 'black',
+    display: 'flex',
+    gap: 30,
+    margin: 25,
+    height: '100%',
+    fontFamily: 'Arial',
   },
   header: {
+    display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 20,
+    alignItems: 'center',
+    marginTop: 40,
   },
   profileSection: {
     flex: 1,
   },
   profileImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
+    width: 30,
+    aspectRatio: 1,
   },
   name: {
     fontSize: 18,
@@ -94,7 +107,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     paddingLeft: 10,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   sectionTitle: {
     fontSize: 18,
@@ -103,11 +116,12 @@ const styles = StyleSheet.create({
   },
   jobCard: {
     backgroundColor: '#e0f7fa',
-    borderRadius: 10,
-    padding: 10,
     marginRight: 10,
-    width: 200,
-    alignItems: 'center',
+              borderRadius: 20,
+              padding: 15,
+              height: 180,
+              display: 'flex',
+              justifyContent: 'space-between',
   },
   jobIcon: {
     width: 40,

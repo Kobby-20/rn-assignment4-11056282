@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 const LoginScreen = ({ navigate }) => {
   return (
-    <View style={styles.container}>
+    
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Jobizz</Text>
       <Text style={styles.welcomeText}>Welcome Back 👋</Text>
       <Text style={styles.subText}>Let's log in. Apply to jobs!</Text>
@@ -20,20 +21,26 @@ const LoginScreen = ({ navigate }) => {
       <TouchableOpacity>
         <Text style={styles.registerText}>Haven't an account? Register</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: 'white',
+    color: 'black',
+    justifyContent: "center",
+    alignContent: "center",
+    display: "flex",
+    margin: 25,
+    marginTop: 10,
+    height: "100%",
+    gap: 10,
+    fontFamily: 'Arial',
   },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 0,
     color: '#007BFF',
   },
   welcomeText: {
@@ -41,8 +48,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   subText: {
-    fontSize: 16,
-    marginBottom: 20,
+    fontSize: 14,
+    marginBottom: 10,
+    color: 'gray',
   },
   input: {
     height: 40,
